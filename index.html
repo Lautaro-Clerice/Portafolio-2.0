@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Portafolio Lautaro clerice</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+        <header class="header" id="header">
+            <div class="logo">
+                <p class="logoNombre"><a href="#principal" class="logoNombre">< Lautaro <span>Clerice /> </a></span></p>
+            </div>
+            <nav class="navbar">
+                <div class="menu-icon">
+                    <i class="fa-solid fa-bars toggle-menu" id="toggle-menu"></i>
+                </div>
+                <div class="contenedor-menu">    
+                    <ul class="navbar-list menu-animado menu" data-animation="bonus" id="navbar-list1">
+                        <li><a class="navbar-opciones" id="sobreMiId" href="#sobre-mi">Sobre mi</a></li>
+                        <li><a class="navbar-opciones" href="#skills">Skills</a></li>
+                        <li><a class="navbar-opciones" href="#proyectos">Proyectos</a></li>
+                        <li><a class="navbar-opciones" href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    <main>
+        <div class="principal" id="principal">
+            <div class="banner">
+                <img src="" alt="" class="perfil">
+                <h2>Lautaro clerice</h2>
+                <h3>Front-end Developer</h3>
+            </div>
+            <div class="flecha">
+                <img src="https://cdn-icons-png.flaticon.com/512/3840/3840825.png" alt="Arrow-down" id="imgFlecha">
+            </div>
+        </div>
+        <div class="titulo-sobre-mi" id="sobre-mi">
+            <h2>Sobre mi <span><i class="fa-solid fa-arrow-down"></i></span> </h2>
+        </div>
+        <div class="sobre-mi">
+            <div class="caracteristicas card-sobre-mi">
+                <div class="circle"></div>
+                <h2>Mis <span>caracteristicas</span></h2>
+                <ul id="lista-caracteristicas lista-sobre-mi">
+                    <li>-Desarrollador web certificado en Coderhouse</li>
+                    <li>-Curso de javascript en Udemy</li>
+                    <li>-Control de versiones en Git</li>
+                    <li>-Actualmente cursando desarrollador Full Stack en Nucba.</li>
+                    <li>-Actualmente cursando la Tecnicatura en sistemas-UNGS.</li>
+                </ul>
+            </div>
+            <div class="aptitudes card-sobre-mi">
+                <div class="circle"></div>
+                <h2>Mis <span>aptitudes</span></h2>
+                <ul class="lista-aptitudes lista-sobre-mi">
+                    <li>-Aprendizaje constante, siempre queriendo fortalecer mis conocimientos</li>
+                    <li>-Buena comunicacion, dispuesto a escuchar y aportar ideas para mejorar el trabajo en equipo</li>
+                    <li>-Codigo limpio y legible.</li>
+                </ul>
+            </div>    
+        </div>
+        <div class="skills" id="skills">
+            <h2>Mis <span>habilidades</span></h2>
+            <div class="habilidades punchline">
+                <div class="html card-habilidades">
+                    <i class="fa-brands fa-html5" style="color: #ffa200;"></i>
+                    <h3 class="cartel">Html</h3>
+                </div>
+                <div class="css card-habilidades">
+                    <i class="fa-brands fa-css3-alt" style="color: #1f71ff;"></i>
+                    <h3 class="cartel">Css</h3>
+                </div>
+                <div class="js card-habilidades">
+                    <i class="fa-brands fa-js" style="color: #fbff00;"></i>
+                    <h3 class="cartel">JavaScript</h3>
+                </div>
+                <div class="bootstrap card-habilidades">
+                    <i class="fa-brands fa-bootstrap" style="color: #0f00e6;"></i>
+                    <h3 class="cartel">Bootstrap</h3>
+                </div>
+                <div class="sass card-habilidades">
+                    <i class="fa-brands fa-sass" style="color: #ff14b5;"></i>
+                    <h3 class="cartel">Sass</h3>
+                </div>
+                <div class="git card-habilidades" >
+                    <i class="fa-brands fa-git-alt" style="color: #df3030;"></i>
+                    <h3 class="cartel">Git</h3>
+                </div>
+            </div>
+        </div>
+        <div class="proyectos tagline" id="proyectos">
+            <h2>Algunos de mis <span>proyectos</span> <i class="fa-solid fa-arrow-down"></i></h2>
+            <div class="container-proyecto headline">
+                <div class="cardProyect card1">
+            
+                </div>
+                <div class="cardProyect card2">
+
+                </div>
+                <div class="cardProyect card3">
+
+                </div>
+            </div>    
+        </div>
+        <div class="form-contacto" id="contacto">
+            <div class="qr">
+                <div class="titulo-qr">
+                    <h2>Escanea para ver <span><i class="fa-solid fa-arrow-down"></i></span> </h2>
+                </div>    
+                <div class="img-qr">
+                    <img src="./img/qr_download.png" alt="codigo qr">
+                </div>
+            </div>
+            <form action="">
+                <h2>Ante cualquier duda, contactame <span><i class="fa-solid fa-arrow-down"></i></span></h2>
+                <label for="">
+                    <p>Nombre completo *</p>
+                    <input type="text" placeholder="Escribí tu nombre acá..."></label><br>
+                <label for="">
+                    <p>Email *</p>
+                    <input type="text" placeholder="Escribí tu Email acá..."></label><br>
+                <label for="">
+                    <p>Telefono *</p>
+                    <input type="text" placeholder="Escribí tu telefono acá..."></label><br>
+                <label for="">
+                    <p>Mensaje *</p>
+                    <textarea cols="35" rows="2" placeholder="Dejame tu consulta..."></textarea></label><br>
+                <button type="submit" class="custom-btn btn-14">Enviar</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <address>-Desarrollado por Lautaro Clerice-</address>
+    </footer>
+</body>
+<script src="app.js"></script>
+</html>

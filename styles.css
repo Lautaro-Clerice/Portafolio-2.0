@@ -9,6 +9,8 @@ body {
 }
 html {
     scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 ul li {
     list-style: none;
@@ -425,8 +427,9 @@ footer {
 }
 
 @media screen and (max-width: 600px){
-    .principal {
+    #principal {
         height: 500px;
+        width: 100%;
     }
     .principal h2 {
         color: white;
@@ -449,7 +452,7 @@ footer {
     .navbar-list {
         background-color: white;
         border-radius: 1px;
-        width:475%;
+        width:100%;
         margin-top: 0;
         height: 400px;
         transition: .5s;
@@ -488,8 +491,9 @@ footer {
     .header{
         z-index: 99999;
         height: 50px;
-        width: 100%;
+        width: 85%;
         transition: .7s;
+        border: 1px solid blue;
     }
     .contenedor-menu {
         margin-left: -7px;
@@ -499,26 +503,19 @@ footer {
     .toggle-menu {
         padding: 10px;
     }
-    .habilidades {
-        margin-left: 5%;
-    }
     .container-proyecto {
-        grid-template-columns:repeat(1, 1fr) ;
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-areas: 
-        "card1"
-        "card2"
-        "card3";
-        width: 90%;
-        margin: 30px;
-        grid-gap:30px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+            "card1"
+            "card2"
+            "card3";
     }
     .habilidades {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-areas: "html css"
-        "js bs"
-        "git sass";
+        grid-template-areas:
+            "html css"
+            "js bs"
+            "git sass";
     }
     .img-qr img {
         width: 250px;

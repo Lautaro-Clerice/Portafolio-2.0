@@ -4,6 +4,10 @@ const listaMenu = document.getElementById("navbar-list1");
 const barraNav = document.getElementById("header");
 const navbarOpciones = document.getElementsByClassName("navbar-opciones");
 const logoNombre = document.getElementsByClassName("logoNombre");
+const logo = document.getElementById("logoNombre")
+const scrollTopUp = document.getElementsByClassName("scrollTop");
+const imgFlecha = document.getElementById("imgFlecha");
+const sobreMi = document.getElementById("sobre-mi");
 //------------------------------------------------------------>
 
 //------------------------------------------------------------>
@@ -21,9 +25,13 @@ botonMenu.addEventListener("click", () => {
    // COLOR AL SCROLLER EL NAV
    window.addEventListener("scroll", () => {
     const scrollY = window.scrollY;
-    const alturaCambio = 350;
-    const alturaCambioSobremi = 400;
-    
+    const alturaCambio = 100;
+    const alturaScrollTop = 400;
+    if (scrollY > alturaScrollTop) {
+      scrollTopUp[0].style.display = "flex";
+    }else {
+      scrollTopUp[0].style.display = "none";
+    }
     if (scrollY > alturaCambio) {
       barraNav.classList.add("colorNavMov");
       for (let i = 0; i < navbarOpciones.length; i++) {
@@ -39,7 +47,6 @@ botonMenu.addEventListener("click", () => {
       for (let i = 0; i < navbarOpciones.length; i++) {
         navbarOpciones[i].style.color = "white";
       }
-      
       // Cambia el color del texto en logoNombre a blanco
       for (let i = 0; i < logoNombre.length; i++) {
         logoNombre[i].style.color = "white";
@@ -58,12 +65,10 @@ document.querySelectorAll(".navbar-list a").forEach((enlace) => {
 });
 //--------------------------------------------------------------->
 
-//ESTILOS PARA LA ANIMACION DE SCROLL
-ScrollReveal().reveal('.headline');
-ScrollReveal().reveal('.tagline', { delay: 200 });
-ScrollReveal().reveal('.punchline', { delay: 200 });
 //---------------------------------------------------------------->
-
-
+// Funcionalidad boton scrollTop y imgFlecha
+scrollTopUp[0].addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
 //---------------------------------------------------------------->
 

@@ -1,20 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Phudu:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap');
+
 /*Estilos para etiquetas*/
 body {
     text-align: center;
     font-family: 'Oswald', sans-serif;
     margin: 0;
 }
+
 html {
     scroll-behavior: smooth;
     max-width: 100%;
     overflow-x: hidden;
 }
+
 ul li {
     list-style: none;
 }
+
 span {
     color: rgb(255, 217, 2);
 }
@@ -23,19 +27,13 @@ a {
     text-decoration: none;
     color: black;
 }
-textarea {
-    font-family: 'Oswald', sans-serif ;
-    border: .5px solid yellow;
-    border-radius: 5px;
-}
-form {
-    margin-left: 10%;
-    padding: 10px;
-    width: 100%;
-}
+
+
+
 footer {
     margin-top: 20px;
 }
+
 /*--------------------------------------------*/
 .flecha {
     height: 100%;
@@ -43,6 +41,7 @@ footer {
     justify-content: center;
     align-items: end;
 }
+
 #imgFlecha {
     width: 40px;
 }
@@ -54,6 +53,7 @@ footer {
     align-items: center;
     position: relative;
 }
+
 .principal h2 {
     text-transform: uppercase;
     font-weight: 500;
@@ -63,14 +63,14 @@ footer {
     color: white;
     text-align: center;
 }
+
 .principal h3 {
     color: rgb(255, 217, 2);
 }
+
 #principal {
-    background-image:linear-gradient(
-    rgba(10, 25, 74, 0.534),
-    rgba(15, 18, 92, 0.566)
-    ), url(./img/5006ea02-d490-4848-a1a8-09fe59afd30f.jpg);
+    background-image: linear-gradient(rgba(10, 25, 74, 0.534),
+            rgba(15, 18, 92, 0.566)), url(./img/5006ea02-d490-4848-a1a8-09fe59afd30f.jpg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -78,6 +78,7 @@ footer {
     z-index: -1;
     height: 650px;
 }
+
 .banner {
     margin-top: -40px;
     position: absolute;
@@ -85,70 +86,103 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 /*------------------------------------------------*/
 /* HABILIDADES ICONOS */
 .habilidades {
     display: grid;
-    grid-template-columns:repeat(4, 200px) ;
-    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(3, 1fr);
     grid-gap: 20px;
     grid-template-areas:
-    "nada html nada1 css"
-    "js nada2 bs nada3"
-    "nada4 git nada5 sass";
+        "nada html nada1 css"
+        "js nada2 bs mysql"
+        "nada4 git nada5 sass";
 }
-.html{
+
+.mysql {
+    grid-area: mysql;
+}
+
+.html {
     grid-area: html;
 }
+
 .css {
     grid-area: css;
 }
+
 .js {
     grid-area: js;
 }
+
 .bootstrap {
     grid-area: bs;
+}
+
+.mysql img {
+    width: 100px;
+}
+
+.card-habilidades img {
+    margin-top: 22%;
+    transition: .5s ease-in-out;
+}
+
+.card-habilidades:hover img {
+    transform: rotate(360deg) scale(1.5);
+
 }
 
 .card-habilidades {
     height: 180px;
     width: 180px;
-    box-shadow: 1px 1px 7px rgba(255, 217, 2, 0.904) ;
+    box-shadow: 1px 1px 15px rgb(255, 217, 2);
     border: .5px solid rgba(128, 128, 128, 0.111);
     border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.568);
+}
+.skills h2 {
+    color: #fff;
+    margin-top: 10vh;
 }
 .card-habilidades i {
     margin-top: 22%;
-    transition: .7s ease-in-out;
+    transition: .5s ease-in-out;
 }
+
 .card-habilidades:hover i {
     transform: rotate(360deg) scale(1.5);
 
-} 
+}
+
 .cartel {
     margin-left: 13%;
     box-shadow: 0px 0px 2px grey;
-    background-color: rgba(0, 0, 0, 0.353);
+    background-color: rgba(255, 196, 1, 0.801);
     color: white;
     font-weight: 300;
     width: 100px;
-    border-radius:5px ;
+    border-radius: 5px;
     position: absolute;
     opacity: 0;
     transition: opacity 1.2s;
-    
+
 }
 
 .card-habilidades:hover .cartel {
     transition: 1.2s;
     opacity: 1;
 }
+
 .git {
     grid-area: git;
 }
+
 .sass {
     grid-area: sass;
 }
+
 .fa-brands {
     font-size: 100px;
     margin-top: 20px;
@@ -157,26 +191,28 @@ footer {
 .perfil {
     width: 250px;
     height: 250px;
-    box-shadow: 1px 1px 6px rgba(255, 217, 2, 0.44) ;
+    box-shadow: 2px 8px 10px rgba(255, 255, 255, 0.726);
     border-radius: 50%;
 }
+
 /*-------------------------------------------------------*/
 
 
 /* FORMULARIO */
 .form-contacto {
-    text-align: start; 
+    text-align: start;
     border-radius: 5px;
-    background-color:rgba(72, 72, 72, 0.082) ;
+    background-color: rgba(72, 72, 72, 0.082);
     margin-left: 2%;
 }
+
 .form-contacto p {
     font-weight: 300;
 }
 
 .form-contacto input {
     width: 75%;
-    height: 25px ;
+    height: 25px;
     border: .5px solid yellow;
     border-radius: 5px;
 }
@@ -194,16 +230,17 @@ footer {
     transition: all 0.3s ease;
     position: relative;
     display: inline-block;
-     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-     7px 7px 20px 0px rgba(0,0,0,.1),
-     4px 4px 5px 0px rgba(0,0,0,.1);
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
     outline: none;
-    background: rgb(255,151,0);
+    background: rgb(255, 151, 0);
     border: none;
     z-index: 1;
     margin-top: 5px;
     margin-bottom: 10px;
-  }
+}
+
 .btn-14:after {
     position: absolute;
     content: "";
@@ -215,58 +252,106 @@ footer {
     border-radius: 5px;
     background-color: #eaf818;
     background-image: linear-gradient(315deg, #eaf818 0%, #f6fc9c 74%);
-    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-    7px 7px 20px 0px rgba(0,0,0,.1),
-    4px 4px 5px 0px rgba(0,0,0,.1);
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
     transition: all 0.3s ease;
 }
+
 .btn-14:hover {
     color: #000;
 }
-  .btn-14:hover:after {
+
+.btn-14:hover:after {
     top: auto;
     bottom: 0;
     height: 100%;
 }
-  .btn-14:active {
+
+.btn-14:active {
     top: 2px;
 }
+
 /*-----------------------------------------------*/
 /*SOBRE MI*/
 .sobre-mi {
     text-align: start;
     font-weight: 300;
+    transition: .5s;
 }
-
-.card-sobre-mi{
+.sobreMi-diagonal::after {
+    position: relative;
+    top: 100%;
+    left: 0;
+    content: '';
+    height: 0;
+    width: 0;
+    border-right: 100vw solid white;
+    border-bottom: 4vw solid transparent;
+    border-top: 0px solid transparent;
+    overflow: hidden;
+}
+.sobreMi-diagonal-down {
+     position: relative;
+    top: 100%;
+    left: 0;
+    content: '';
+    height: 0;
+    width: 0;
+    border-left: 100vw solid rgb(255, 255, 255);
+    border-top: 4vw solid transparent;
+    border-bottom: 0px solid transparent;
+    overflow: hidden;
+}
+.card-sobre-mi span {
+    color: black;
+    transition: .6s;
+}
+.card-sobre-mi:hover span {
+    color: rgb(255, 217, 2);
+}
+.card-sobre-mi {
     text-align: start;
     margin: 10px;
     padding: 15px;
     border-radius: 7px;
     padding-top: 0px;
-    box-shadow:1px 1px 8px rgba(128, 128, 128, 0.725);
+    box-shadow: 1px 1px 8px rgba(128, 128, 128, 0.725);
     width: 65%;
     margin-left: 13%;
     position: relative;
-    transition: .9s;
+    transition: .5s;
+}
+.card-sobre-mi:hover {
+    transform: scale(1.04);
 }
 .card-sobre-mi h2 {
     position: relative;
+    transition:.5s;
 }
+
 .card-sobre-mi:hover h2 {
     color: white;
-    transition: .8s;
 }
+.card-sobre-mi ul li {
+    transition: 1s;
+}
+.card-sobre-mi:hover ul li {
+    color: white;
+}
+
 .card-sobre-mi ul {
     position: relative;
     display: flex;
     flex-direction: column;
-    
+
 }
+
 .card-sobre-mi ul li {
-    padding:13px;
+    padding: 13px;
     font-size: 17px;
 }
+
 .circle {
     position: absolute;
     top: 0;
@@ -275,6 +360,7 @@ footer {
     height: 100%;
     overflow: hidden;
 }
+
 .circle::before {
     content: "";
     position: absolute;
@@ -284,15 +370,17 @@ footer {
     left: 0;
     background-color: #FBAB7E;
     background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
-    clip-path: circle(50px at 99% 10px );
+    clip-path: circle(50px at 99% 10px);
     transition: .9s;
 }
+
 .card-sobre-mi:hover .circle:before {
     clip-path: circle(1600px at center);
-    
+
 }
+
 .lista-sobre-mi li {
-    font-weight: 300; 
+    font-weight: 300;
 }
 
 /*-------------------------------------------------------------*/
@@ -305,34 +393,42 @@ footer {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas: "nada card1 card2 nada1"
-    "nada card3 card3 nada1";
+        "nada card3 card3 nada1";
     grid-gap: 30px;
 }
+
 .card1 {
-    grid-area: card1 ;
+    grid-area: card1;
 }
+
 .card2 {
-    grid-area: card2 ;
+    grid-area: card2;
 }
+
 .card3 {
-    grid-area: card3 ;
+    grid-area: card3;
 }
+
 .cardProyect {
     box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.403);
     border-radius: 10px;
 }
+
 /*---------------------------------------------------------------------*/
 
 /*HEADER NAV*/
 .header span {
     color: #fff;
 }
+
 .logoNombre a {
     color: white;
 }
+
 .logoNombre {
     font-size: 19px;
 }
+
 .header {
     position: fixed;
     display: flex;
@@ -344,37 +440,44 @@ footer {
 .navbar-list {
     display: none;
 }
+
 .header i {
     font-size: 26px;
     width: 26px;
     color: rgb(255, 217, 2);
     display: none;
 }
+
 .colorNavMov {
     background-color: #fff;
     box-shadow: 0px 8px 10px grey;
     transition: 0.7s ease;
     z-index: 100;
 }
+
 /*-------------------------------------------*/
-/*SKILLS*/
-.skills {
-    width: 80%;
-    margin-left: 10%;
+
+.background-skills {
+    background-image: linear-gradient(rgba(41, 41, 102, 0.534),
+    rgba(25, 25, 32, 0.566)), url(./img/Close_up_photo_of_keyboard-Brand_HD_Wallpaper_1366x768.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
 }
 
-/*--------------------------------------------*/  
+/*--------------------------------------------*/
 .menu li {
     margin-right: 70px;
 }
-  
+
 .menu a {
     position: relative;
     display: block;
     padding: 5px;
-    font-size: 19px ;
+    font-size: 19px;
 }
-  
+
 .menu a::before {
     content: '';
     position: absolute;
@@ -388,30 +491,31 @@ footer {
     transform-origin: left;
     transition: transform 0.5s ease-in-out;
 }
-  
+
 .menu a:hover::before {
     transform: scaleX(1);
 }
-  
-  
-  /* ANIMATIONS*/
+
+
+/* ANIMATIONS*/
 .menu[data-animation="to-left"] a::before {
     transform-origin: right;
 }
-  
+
 .menu[data-animation="center"] a::before {
     transform-origin: center;
 }
-  
+
 .menu[data-animation="bonus"] a::before {
     transform-origin: right;
 }
-  
+
 .menu[data-animation="bonus"] a:hover::before {
     transform-origin: left;
     transform: scaleX(1);
     transition-timing-function: cubic-bezier(0.2, 1, 0.82, 0.94);
 }
+
 .subrayado-ul {
     content: '';
     position: absolute;
@@ -425,26 +529,71 @@ footer {
     transform-origin: left;
     transition: transform 0.5s ease-in-out;
 }
-
-@media screen and (max-width: 600px){
+.formulario {
+    width: 100vh;
+    border: none;
+    height: 400px;
+}
+#contacto {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+footer {
+    margin-bottom: 20px;
+}
+.scrollTop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 90%;
+    left:  95%;
+    width: 50px;
+    height: 50px;
+    background-color: #ffe600;
+    border-radius: 50%;
+    display: none;
+    transition: .5s;
+    box-shadow: 2px 5px 9px rgba(0, 0, 0, 0.548);
+}
+.scrollTop i {
+    font-size:  24px;
+}
+.flecha img {
+    margin-bottom: 20px;
+}
+@media screen and (max-width: 600px) {
+    #contacto {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        justify-content: space-around;
+    }
     body {
         overflow-x: hidden;
     }
+
     #principal {
         height: 500px;
         width: 100%;
     }
+
     .principal h2 {
         color: white;
         text-align: center;
         margin-top: -10px;
     }
+
     .principal h3 {
         margin-top: -30px;
     }
+
     .banner {
         margin-top: -5px;
     }
+
     .visible {
         display: flex;
         width: 100%;
@@ -452,23 +601,27 @@ footer {
         justify-content: center;
         transition: .5s;
     }
+
     .navbar-list {
         background-color: white;
         border-radius: 1px;
-        width:100%;
+        width: 100%;
         margin-top: 0;
         height: 400px;
         transition: .5s;
     }
+
     .navbar-list li {
-        padding-top:20px ;
-        padding-bottom:20px ;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
+
     .navbar-list li a {
         color: black;
         font-size: 300;
         letter-spacing: 1px;
     }
+
     .logo {
         position: absolute;
         top: 0;
@@ -477,9 +630,11 @@ footer {
         z-index: 2;
         margin-left: 70%;
     }
+
     .logo span {
         color: rgb(255, 217, 2);
     }
+
     .menu-icon {
         width: 40px;
         display: flex;
@@ -487,24 +642,29 @@ footer {
         margin: 0;
         padding: 0;
     }
+
     .header i {
         display: flex;
         font-size: 29px;
     }
-    .header{
+
+    .header {
         z-index: 99999;
-        height: 50px;
+        height: 60px;
         width: 100%;
         transition: .7s;
         margin-left: 0;
     }
+
     .contenedor-menu {
         margin-left: -7px;
         height: 200px;
     }
+
     .toggle-menu {
         padding: 10px;
     }
+
     .container-proyecto {
         grid-template-columns: repeat(1, 1fr);
         width: 100%;
@@ -514,67 +674,114 @@ footer {
             "card3";
     }
     .habilidades {
+        margin: 10vh;
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
         grid-template-areas:
             "html css"
             "js bs"
-            "git sass";
+            "git sass"
+            "mysql nada";
     }
+    #skills {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .mysql {
+        margin-left: 50%;
+    }
+
     .img-qr img {
         width: 250px;
         border-radius: 8px 8px 0 0;
         text-align: center;
     }
+
     .img-qr {
         display: flex;
         justify-content: center;
         margin-bottom: 40px;
     }
+
     .titulo-qr {
         display: flex;
         justify-content: center;
     }
-    .form-contacto {
+    .form-google {
         width: 100%;
-        margin-left: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .scrollTop {
+        left: 85%;
     }
 }
-@media screen and (min-width: 601px) and (max-width: 1100px){
-    .habilidades{
-        display: grid;
-        grid-template-columns:repeat(3, 1fr) ;
-        grid-template-rows: repeat(2,1fr);
-        grid-template-areas:
-        "html css js"
-        "bs git sass";
+
+@media screen and (min-width: 601px) and (max-width: 1100px) {
+    body {
+        overflow-x: hidden;
     }
+    #contacto {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #skills {
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .habilidades {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "html css js"
+            "bs git sass"
+            "nada1 mysql nada2";
+    }
+
     .header i {
         display: none;
     }
+
     .header {
         display: flex;
         justify-content: space-between;
     }
+
     #navbar-list1 {
-        display:flex;
+        display: flex;
+
     }
+
     .navbar-list li {
         margin-right: 60px;
     }
+
     .navbar-opciones {
         color: white;
         position: relative;
     }
+
     .logoNombre span {
         color: rgb(255, 217, 2);
     }
+
     #principal {
         border: 1px solid white;
     }
+
     .colorLogo {
-        color:#000;
+        color: #000;
     }
+
     .container-proyecto {
         grid-template-columns: repeat(3, 30%);
         grid-template-rows: repeat(1, 1fr);
@@ -582,140 +789,203 @@ footer {
         height: 400px;
         width: 100%;
         margin-left: 3%;
-        grid-gap:20px ;
+        grid-gap: 20px;
     }
+
     .skills {
         margin-left: 5%;
     }
+
     .img-qr img {
         width: 350px;
         border-radius: 8px 8px 0 0;
         text-align: center;
     }
+
     .img-qr {
         display: flex;
         justify-content: center;
         margin-bottom: 40px;
     }
+
     .titulo-qr {
         display: flex;
         justify-content: center;
     }
-    .form-contacto {
+    .form-google {
         width: 100%;
-        margin-left:10%;
+        display: flex;
+        justify-content: center;
+    }
+    .scrollTop {
+        left: 90%;
     }
 }
+
 @media screen and (min-width: 950px) {
     .img-qr img {
-    width: 350px;
-    border-radius: 8px 8px 0 0;
-    text-align: center;
+        width: 350px;
+        border-radius: 8px 8px 0 0;
+        text-align: center;
     }
+
     .img-qr {
-    display: flex;
-    justify-content: center;
-    margin: 40px 30px;
+        display: flex;
+        justify-content: center;
+        margin: 40px 30px;
     }
+
     .titulo-qr {
-    display: flex;
-    justify-content: center;
+        display: flex;
+        justify-content: center;
     }
+
     .form-contacto {
         display: flex;
     }
+
     /* HABILIDADES ICONOS */
-.habilidades {
-    width: 84%;
-    margin:50px auto ;
-    display: grid;
-    grid-template-columns:repeat(4, 150px) ;
-    grid-template-rows: repeat(3, 170px);
-    grid-gap: 20px;
-    grid-template-areas:
-    "nada html nada1 css"
-    "js nada2 bs nada3"
-    "nada4 git nada5 sass";
-}
-.html{
-    grid-area: html;
-}
-.css {
-    grid-area: css;
-}
-.js {
-    grid-area: js;
-}
-.bootstrap {
-    grid-area: bs;
+    #skills {
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .habilidades {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "html css bs"
+            "js sass git"
+            "nada1 mysql nada2";
+    }
+
+    .html {
+        grid-area: html;
+    }
+
+    .css {
+        grid-area: css;
+    }
+
+    .js {
+        grid-area: js;
+    }
+
+    .bootstrap {
+        grid-area: bs;
+    }
+
+    .card-habilidades {
+        height: 180px;
+        width: 180px;
+        margin: 5px;
+        box-shadow: 1px 1px 7px rgba(255, 217, 2, 0.904);
+        border: .5px solid rgba(128, 128, 128, 0.111);
+        border-radius: 50%;
+    }
+
+    .card-habilidades h3 {
+        margin-top: -3px;
+    }
+
+    .git {
+        grid-area: git;
+    }
+
+    .sass {
+        grid-area: sass;
+    }
+
+    .fa-brands {
+        font-size: 100px;
+        margin-top: 20px;
+    }
+
+    .perfil {
+        width: 250px;
+        height: 250px;
+        box-shadow: 1px 1px 6px rgba(255, 217, 2, 0.44);
+        border-radius: 50%;
+    }
+
+    .form-contacto {
+        display: flex;
+        width: 100%;
+        margin-left: 2%;
+    }
+    .scrollTop {
+        left: 93%;
+    }
 }
 
-.card-habilidades {
-    height: 180px;
-    width: 180px;
-    margin: 5px;
-    box-shadow: 1px 1px 7px rgba(255, 217, 2, 0.904) ;
-    border: .5px solid rgba(128, 128, 128, 0.111);
-    border-radius: 50%;
-}
-.card-habilidades h3 {
-    margin-top: -3px;
-}
-.git {
-    grid-area: git;
-}
-.sass {
-    grid-area: sass;
-}
-.fa-brands {
-    font-size: 100px;
-    margin-top: 20px;
-}
-
-.perfil {
-    width: 250px;
-    height: 250px;
-    box-shadow: 1px 1px 6px rgba(255, 217, 2, 0.44) ;
-    border-radius: 50%;
-}
-.form-contacto {
-    width: 100%;
-    margin-left:2%;
-}
-}
 @media screen and (min-width: 1101px) {
+    #skills {
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .habilidades {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "nada3 html nada2 css nada4"
+            "js nada1 sass nada5 git"
+            "nada8 mysql nada7 bs nada9";
+    }
+
     .navbar-list li {
         margin-right: 60px;
     }
+
     .navbar-list {
         display: flex;
     }
+
     .navbar-opciones {
         color: white;
     }
+
     .logoNombre span {
         color: rgb(255, 217, 2);
     }
+
     .sobre-mi {
         display: flex;
         margin: 0px;
         height: 500px;
 
     }
+
     .card-sobre-mi {
         margin: 0;
         margin: 3%;
     }
-   
-}
-@media screen and (min-width: 1300px) {
-    #principal{
-     height: 750px;
+    #skills {
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
     }
     .form-contacto {
-        width: 100%;
-        margin-left:0%;
+        width: 100vh;
+        display: flex;
+        margin-left: 0;
     }
+}
+
+@media screen and (min-width: 1300px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    #principal {
+        height: 750px;
+    }
+
     .subrayado-ul {
         content: '';
         position: absolute;
@@ -730,13 +1000,16 @@ footer {
         transition: transform 0.5s ease-in-out;
     }
 }
+
 @media screen and (min-width: 1600px) {
-    .card-habilidades {
-        margin-left: 100%;
+    body {
+        overflow-x: hidden;
     }
+
     .cartel {
         margin-left: 10%;
     }
+
     #principal {
         height: 950px;
     }

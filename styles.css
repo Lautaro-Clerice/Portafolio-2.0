@@ -563,6 +563,38 @@ footer {
 .flecha img {
     margin-bottom: 20px;
 }
+@media screen and (max-width: 420px){
+    .cardProyect {
+        width: 90%;
+        margin-left: 3vh;
+    }
+    .formulario {
+        width: 100%;
+    }
+    .habilidades {
+        margin-right:0px;
+        margin-left: 4vh;
+    }
+    .card-habilidades i {
+        font-size: 68px;
+    }
+    .card-habilidades img {
+        width: 68px;
+    }
+    .card-habilidades {
+        width: 100px;
+        height: 100px;
+    }
+    .card-sobre-mi {
+        width: 95%;
+        margin-left: 0;
+    }
+}
+@media screen and (min-width:600px) {
+    .habilidades {
+        margin: 10vh;
+    }
+}
 @media screen and (max-width: 600px) {
     #contacto {
         width: 100%;
@@ -674,7 +706,6 @@ footer {
             "card3";
     }
     .habilidades {
-        margin: 10vh;
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 1fr);
@@ -711,6 +742,10 @@ footer {
         display: flex;
         justify-content: center;
     }
+    .formulario {
+        width: 100%;
+        margin-left: 0px;
+    }
     .form-google {
         width: 100%;
         display: flex;
@@ -738,6 +773,7 @@ footer {
         justify-content: center;
     }
     .habilidades {
+        margin-left: 0px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);

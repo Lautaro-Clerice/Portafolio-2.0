@@ -16,6 +16,7 @@ botonMenu.addEventListener("click", () => {
   listaMenu.classList.toggle("visible");
   if (listaMenu.classList.contains("visible")) {
     listaMenu.style.maxHeight = listaMenu.scrollHeight + "0px";
+    listaMenu.style.maxWidth = "500px"
   } else {
     listaMenu.style.maxHeight = "0";
   }
@@ -27,11 +28,13 @@ botonMenu.addEventListener("click", () => {
     const scrollY = window.scrollY;
     const alturaCambio = 100;
     const alturaScrollTop = 400;
+
     if (scrollY > alturaScrollTop) {
       scrollTopUp[0].style.display = "flex";
     }else {
       scrollTopUp[0].style.display = "none";
     }
+
     if (scrollY > alturaCambio) {
       barraNav.classList.add("colorNavMov");
       for (let i = 0; i < navbarOpciones.length; i++) {

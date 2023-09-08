@@ -421,6 +421,7 @@ footer {
     align-items: center;
 }
 .lista-tec {
+    margin-left: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -431,14 +432,19 @@ footer {
     transition: .3s;
 }
 .lista-tec ul li {
+    margin: -20px;
     transition: .3s;
+    border-radius: 50%;
+    background-color: #ffffffea;
+    width: 60px;
+    height: 60px;
 }
 .lista-tec ul li i {
     font-size: 40px;
+    margin-top: 11px;
 }
 .cardProyect{
     transition: .2s;
-    box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.403);
     border-radius: 10px;
 }
 .cardProyect:hover .lista-tec ul {
@@ -446,7 +452,10 @@ footer {
     transform: translateY(70px);
 }
 .cardProyect:hover .lista-tec ul li {
-    margin: 20px;
+    margin: 0px;
+}
+.cardProyect:hover .lista-beca {
+    margin-left: 0;
 }
 .card2:hover {
     background-image: url(./img/FondoBecabLUR.png);
@@ -619,13 +628,63 @@ footer {
 .flecha img {
     margin-bottom: 20px;
 }
-
+.custom-btn {
+    width: 150px;
+    height: 50px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+.btn {
+    background: rgb(255,151,0);
+    border: none;
+    z-index: 1;
+  }
+  .btn:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 5px;
+    background-color: #eaf818;
+    background-image: linear-gradient(315deg, #eaf818 0%, #f6fc9c 74%);
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5);
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    transition: all 0.3s ease;
+  }
+  .btn:hover {
+    color: #000;
+  }
+  .btn:hover:after {
+    top: auto;
+    bottom: 0;
+    height: 100%;
+  }
+  .btn:active {
+    top: 2px;
+  }
+  
 @media screen and (max-width: 420px){
     .lista-tec ul li i {
         font-size: 35px;
     }
     .cardProyect:hover .lista-tec ul li {
-        margin: 1px;
+        margin: 2px;
     }
     .container-proyecto {
         height: 750px;

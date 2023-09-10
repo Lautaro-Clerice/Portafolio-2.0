@@ -37,9 +37,6 @@ botonMenu.addEventListener("click", () => {
 
     if (scrollY > alturaCambio) {
       barraNav.classList.add("colorNavMov");
-      for (let i = 0; i < navbarOpciones.length; i++) {
-        navbarOpciones[i].style.color = "black";
-      }
       
       // Cambia el color del texto en logoNombre a negro
       for (let i = 0; i < logoNombre.length; i++) {
@@ -47,9 +44,6 @@ botonMenu.addEventListener("click", () => {
       }
     } else {
       barraNav.classList.remove("colorNavMov");
-      for (let i = 0; i < navbarOpciones.length; i++) {
-        navbarOpciones[i].style.color = "white";
-      }
       // Cambia el color del texto en logoNombre a blanco
       for (let i = 0; i < logoNombre.length; i++) {
         logoNombre[i].style.color = "white";

@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Phudu:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap');
-
+:root {
+    --colorPrincipal: rgb(255, 217, 2);
+}
 /*Estilos para etiquetas*/
 body {
     text-align: center;
@@ -20,7 +22,7 @@ ul li {
 }
 
 span {
-    color: rgb(255, 217, 2);
+    color: var(--colorPrincipal);
 }
 
 a {
@@ -65,7 +67,7 @@ footer {
 }
 
 .principal h3 {
-    color: rgb(255, 217, 2);
+    color: var(--colorPrincipal);
 }
 
 #principal {
@@ -198,80 +200,6 @@ footer {
 /*-------------------------------------------------------*/
 
 
-/* FORMULARIO */
-.form-contacto {
-    text-align: start;
-    border-radius: 5px;
-    background-color: rgba(72, 72, 72, 0.082);
-    margin-left: 2%;
-}
-
-.form-contacto p {
-    font-weight: 300;
-}
-
-.form-contacto input {
-    width: 75%;
-    height: 25px;
-    border: .5px solid yellow;
-    border-radius: 5px;
-}
-
-.custom-btn {
-    width: 130px;
-    height: 40px;
-    color: #fff;
-    border-radius: 5px;
-    padding: 10px 25px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 500;
-    background: transparent;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
-        7px 7px 20px 0px rgba(0, 0, 0, .1),
-        4px 4px 5px 0px rgba(0, 0, 0, .1);
-    outline: none;
-    background: rgb(255, 151, 0);
-    border: none;
-    z-index: 1;
-    margin-top: 5px;
-    margin-bottom: 10px;
-}
-
-.btn-14:after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 0;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    border-radius: 5px;
-    background-color: #eaf818;
-    background-image: linear-gradient(315deg, #eaf818 0%, #f6fc9c 74%);
-    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
-        7px 7px 20px 0px rgba(0, 0, 0, .1),
-        4px 4px 5px 0px rgba(0, 0, 0, .1);
-    transition: all 0.3s ease;
-}
-
-.btn-14:hover {
-    color: #000;
-}
-
-.btn-14:hover:after {
-    top: auto;
-    bottom: 0;
-    height: 100%;
-}
-
-.btn-14:active {
-    top: 2px;
-}
-
 /*-----------------------------------------------*/
 /*SOBRE MI*/
 .sobre-mi {
@@ -308,7 +236,7 @@ footer {
     transition: .6s;
 }
 .card-sobre-mi:hover span {
-    color: rgb(255, 217, 2);
+    color: var(--colorPrincipal);
 }
 .card-sobre-mi {
     text-align: start;
@@ -446,10 +374,11 @@ footer {
 .cardProyect{
     transition: .2s;
     border-radius: 10px;
+    position: relative;
 }
 .cardProyect:hover .lista-tec ul {
     opacity: 1;
-    transform: translateY(70px);
+    transform: translateY(60px);
 }
 .cardProyect:hover .lista-tec ul li {
     margin: 0px;
@@ -509,7 +438,7 @@ footer {
 .header i {
     font-size: 26px;
     width: 26px;
-    color: rgb(255, 217, 2);
+    color: var(--colorPrincipal);
     display: none;
 }
 
@@ -616,7 +545,7 @@ footer {
     left:  95%;
     width: 50px;
     height: 50px;
-    background-color: #ffe600;
+    background-color: var(--colorPrincipal);
     border-radius: 50%;
     display: none;
     transition: .5s;
@@ -628,56 +557,24 @@ footer {
 .flecha img {
     margin-bottom: 20px;
 }
-.custom-btn {
-    width: 150px;
-    height: 50px;
-    color: #fff;
-    border-radius: 5px;
-    padding: 10px 25px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 500;
-    background: transparent;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-     7px 7px 20px 0px rgba(0,0,0,.1),
-     4px 4px 5px 0px rgba(0,0,0,.1);
-    outline: none;
-  }
-.btn {
-    background: rgb(255,151,0);
+#custom-btn {
     border: none;
-    z-index: 1;
+    background-color: #ffb109;
+    border-radius: 50%;
+    position:absolute;
+    width: 70px;
+    height: 70px;
+    color: #fff;
+    padding: 10px 25px;
+    opacity: 0;
+    transition: .3s;
 }
-.btn:after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 0;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    border-radius: 5px;
-    background-color: #eaf818;
-    background-image: linear-gradient(315deg, #eaf818 0%, #f6fc9c 74%);
-     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5)
-     7px 7px 20px 0px rgba(0,0,0,.1),
-     4px 4px 5px 0px rgba(0,0,0,.1);
-    transition: all 0.3s ease;
+#custom-btn i {
+    font-size: 20px;
 }
-.btn:hover {
-    color: #000;  }
-  .btn:hover:after {
-    top: auto;
-    bottom: 0;
-    height: 100%;
-  }
-  .btn:active {
-    top: 2px;
-  }
-  
+.cardProyect:hover #custom-btn {
+    opacity: 1;
+}
 @media screen and (max-width: 420px){
     .lista-tec ul li {
         width: 50px;
@@ -709,13 +606,19 @@ footer {
     .cardProyect {
         width: 100%;
         margin-left: 3vh;
+        position: relative;
+    }
+    #custom-btn {
+        position: absolute;
+        top: -10px;
+        right: -10px;
     }
     .formulario {
         width: 100%;
     }
-    .habilidades {
+    #habilidades {
         margin-right:0px;
-        margin-left: 4vh;
+        margin-left: 7vh;
     }
     .card-habilidades i {
         font-size: 68px;
@@ -744,6 +647,9 @@ footer {
     }
 }
 @media screen and (min-width:600px) {
+    .navbar-opciones {
+        color: var(--colorPrincipal)!important;
+    }
     .habilidades {
         margin: 10vh;
     }
@@ -755,8 +661,34 @@ footer {
         "card2";
         padding:30px;
     }
+    .cardProyect {
+        width: 100%;
+        margin-left: 3vh;
+        position: relative;
+    }
+    #custom-btn {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+    }
 }
 @media screen and (max-width: 600px) {
+    .habilidades {
+        margin-left: 3vh;
+    }
+    .navbar-list {
+        position: absolute;
+    }
+    .cardProyect {
+        width: 100%;
+        margin-left: 3vh;
+        position: relative;
+    }
+    #custom-btn {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+    }
     .container-proyecto {
         height: 750px;
         grid-template-columns: repeat(1, 1fr);
@@ -803,6 +735,7 @@ footer {
     }
 
     .visible {
+        color: black;
         display: flex;
         width: 100%;
         flex-direction: column;
@@ -838,7 +771,7 @@ footer {
     }
 
     .logo span {
-        color: rgb(255, 217, 2);
+        color: var(--colorPrincipal);
     }
 
     .menu-icon {
@@ -928,11 +861,22 @@ footer {
     .scrollTop {
         left: 85%;
     }
+    
 }
 
 @media screen and (min-width: 601px) and (max-width: 1100px) {
     body {
         overflow-x: hidden;
+    }
+    .cardProyect {
+        width: 100%;
+        margin-left: 3vh;
+        position: relative;
+    }
+    #custom-btn {
+        position: absolute;
+        top: -10px;
+        right: -10px;
     }
     #contacto {
         width: 100%;
@@ -968,7 +912,7 @@ footer {
 
 
     .navbar-list li {
-        margin-right: 60px;
+        margin-right: 30px;
     }
 
     .navbar-opciones {
@@ -1025,9 +969,22 @@ footer {
     .scrollTop {
         left: 90%;
     }
+    #navbar-list1 {
+        display: flex;
+    }
 }
 
 @media screen and (min-width: 950px) {
+    .cardProyect {
+        width: 100%;
+        margin-left: 3vh;
+        position: relative;
+    }
+    #custom-btn {
+        position: absolute;
+        top:-20px;
+        right: 40px;
+    }
     .img-qr img {
         width: 350px;
         border-radius: 8px 8px 0 0;
@@ -1111,14 +1068,8 @@ footer {
     .perfil {
         width: 250px;
         height: 250px;
-        box-shadow: 1px 1px 6px rgba(255, 217, 2, 0.44);
+        box-shadow: 1px 1px 6px var(--colorPrincipal);
         border-radius: 50%;
-    }
-
-    .form-contacto {
-        display: flex;
-        width: 100%;
-        margin-left: 2%;
     }
     .scrollTop {
         left: 93%;
@@ -1126,6 +1077,16 @@ footer {
 }
 
 @media screen and (min-width: 1101px) {
+    .cardProyect {
+        width: 100%;
+        margin-left: 3vh;
+        position: relative;
+    }
+    #custom-btn {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+    }
     .container-proyecto {
         margin-left: 3%;
         width: 90% !important;
@@ -1164,7 +1125,7 @@ footer {
     }
 
     .logoNombre span {
-        color: rgb(255, 217, 2);
+        color: var(--colorPrincipal);
     }
 
     .sobre-mi {
@@ -1192,6 +1153,16 @@ footer {
 }
 
 @media screen and (min-width: 1300px) {
+    .cardProyect {
+        width: 100%;
+        margin-left: 3vh;
+        position: relative;
+    }
+    #custom-btn {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+    }
     body {
         overflow-x: hidden;
     }
@@ -1216,6 +1187,16 @@ footer {
 }
 
 @media screen and (min-width: 1600px) {
+    .cardProyect {
+        width: 100%;
+        margin-left: 3vh;
+        position: relative;
+    }
+    #custom-btn {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+    }
     body {
         overflow-x: hidden;
     }

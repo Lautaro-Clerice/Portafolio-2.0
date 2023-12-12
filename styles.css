@@ -314,23 +314,21 @@ footer {
 /*-------------------------------------------------------------*/
 
 /*PROYECTOSS*/
+
 .container-proyecto {
-    margin-left: 7%;
-    margin-right: 7%;
-    width: 80% !important;
-    height: 350px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    grid-template-areas: "card1 card1 card2 card2";
-    grid-gap: 30px;
+    width: 100% !important;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+
 }
 .card1 {
     background-image: url(./img/Banner\ para\ YouTube\ Gamer\ Neón\ Simple\ Morado\ y\ Negro.png);
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    grid-area: card1;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -338,11 +336,20 @@ footer {
 }
 
 .card2 {
-    grid-area: card2;
-    background-image: url(./img/Banner\ para\ YouTube\ Gamer\ Neón\ Simple\ Morado\ y\ Negro\ \(1\).png);
+    background-image: url(./img/becashopPc.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size:cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card3 {
+    background-image: url(./img/BecaDesignPc.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size:cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -375,6 +382,8 @@ footer {
     transition: .2s;
     border-radius: 10px;
     position: relative;
+    width: 500px;
+    height: 300px;
 }
 .cardProyect:hover .lista-tec ul {
     opacity: 1;
@@ -458,6 +467,10 @@ footer {
     background-position: center;
     background-size: cover;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /*--------------------------------------------*/
@@ -592,14 +605,6 @@ footer {
     .cardProyect:hover .lista-beca {
         margin-left: -40px;
     }
-    .container-proyecto {
-        height: 750px;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(2,1fr);
-        grid-template-areas: "card1"
-        "card2";
-        margin-left: 0%;
-    }
     .card1 {
         background-size: cover;
     }
@@ -607,8 +612,6 @@ footer {
         background-size: cover;
     }
     .cardProyect {
-        width: 100%;
-        margin-left: 3vh;
         position: relative;
     }
     #custom-btn {
@@ -619,12 +622,15 @@ footer {
     .formulario {
         width: 100%;
     }
-    #habilidades {
-        margin-right:0px;
-        margin-left: 7vh;
-    }
     .card-habilidades i {
         font-size: 68px;
+    }
+    .habilidades {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 60px;
     }
     .card-habilidades img {
         width: 68px;
@@ -653,20 +659,7 @@ footer {
     .navbar-opciones {
         color: var(--colorPrincipal)!important;
     }
-    .habilidades {
-        margin: 10vh;
-    }
-    .container-proyecto {
-        height: 750px;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(2,1fr);
-        grid-template-areas: "card1"
-        "card2";
-        padding:30px;
-    }
     .cardProyect {
-        width: 100%;
-        margin-left: 3vh;
         position: relative;
     }
     #custom-btn {
@@ -676,29 +669,16 @@ footer {
     }
 }
 @media screen and (max-width: 600px) {
-    .habilidades {
-        margin-left: 3vh;
-    }
     .navbar-list {
         position: absolute;
     }
     .cardProyect {
-        width: 100%;
-        margin-left: 3vh;
         position: relative;
     }
     #custom-btn {
         position: absolute;
         top: -10px;
         right: -10px;
-    }
-    .container-proyecto {
-        height: 750px;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(2,1fr);
-        grid-template-areas: "card1"
-        "card2";
-        padding: 20px;
     }
     .card1 {
         background-size: cover;
@@ -806,24 +786,12 @@ footer {
     .toggle-menu {
         padding: 10px;
     }
-
-    .container-proyecto {
-        grid-template-columns: repeat(1, 1fr);
-        width: 100%;
-        grid-template-areas:
-            "card1"
-            "card2"
-            "card3";
-    }
     .habilidades {
-        width: 100%;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        grid-template-areas:
-            "html css"
-            "js bs"
-            "git sass"
-            "mysql nada";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 60px;
     }
     #skills {
         width: 100%;
@@ -872,8 +840,6 @@ footer {
         overflow-x: hidden;
     }
     .cardProyect {
-        width: 100%;
-        margin-left: 3vh;
         position: relative;
     }
     #custom-btn {
@@ -894,14 +860,11 @@ footer {
         justify-content: center;
     }
     .habilidades {
-        margin-left: 0px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-areas:
-            "html css js"
-            "bs git sass"
-            "nada1 mysql nada2";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 60px;
     }
 
     .header i {
@@ -933,15 +896,6 @@ footer {
 
     .colorLogo {
         color: #000;
-    }
-
-    .container-proyecto {
-        height: 750px;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(2,1fr);
-        grid-template-areas: "card1"
-        "card2";
-        padding:30px;
     }
 
     .skills {
@@ -979,8 +933,6 @@ footer {
 
 @media screen and (min-width: 950px) {
     .cardProyect {
-        width: 100%;
-        margin-left: 3vh;
         position: relative;
     }
     #custom-btn {
@@ -1017,13 +969,11 @@ footer {
         justify-content: center;
     }
     .habilidades {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-areas:
-            "html css bs"
-            "js sass git"
-            "nada1 mysql nada2";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 60px;
     }
 
     .html {
@@ -1081,23 +1031,12 @@ footer {
 
 @media screen and (min-width: 1101px) {
     .cardProyect {
-        width: 100%;
-        margin-left: 3vh;
         position: relative;
     }
     #custom-btn {
         position: absolute;
         top: -10px;
         right: -10px;
-    }
-    .container-proyecto {
-        margin-left: 3%;
-        width: 90% !important;
-        height: 350px;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(1,1fr);
-        grid-template-areas: "card1 card2";
-        padding:30px;
     }
     #skills {
         width: 100%;
@@ -1157,8 +1096,6 @@ footer {
 
 @media screen and (min-width: 1300px) {
     .cardProyect {
-        width: 100%;
-        margin-left: 3vh;
         position: relative;
     }
     #custom-btn {
@@ -1191,8 +1128,6 @@ footer {
 
 @media screen and (min-width: 1600px) {
     .cardProyect {
-        width: 100%;
-        margin-left: 3vh;
         position: relative;
     }
     #custom-btn {

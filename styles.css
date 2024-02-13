@@ -97,9 +97,9 @@ footer {
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 20px;
     grid-template-areas:
-        "nada html nada1 css"
-        "js nada2 bs mysql"
-        "nada4 git nada5 sass";
+        "html nada mysql nada1 css"
+        "nada3 js bs nada9 nada2"
+        "git nada4 node  nada5 sass";
 }
 
 .mysql {
@@ -120,6 +120,9 @@ footer {
 
 .bootstrap {
     grid-area: bs;
+}
+.node {
+    grid-area: node;
 }
 
 .mysql img {
@@ -183,6 +186,9 @@ footer {
 
 .sass {
     grid-area: sass;
+}
+.node {
+    grid-area: node;
 }
 
 .fa-brands {
@@ -326,13 +332,15 @@ footer {
 
 }
 .card1 {
-    background-image: url(./img/Banner\ para\ YouTube\ Gamer\ Neón\ Simple\ Morado\ y\ Negro.png);
+    background-image: url(./img/ReTurn.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 .card2 {
@@ -395,12 +403,7 @@ footer {
 .cardProyect:hover .lista-beca {
     margin-left: 0;
 }
-.card2:hover {
-    background-image: url(./img/FondoBecabLUR.png);
-}
-.card1:hover {
-    background-image: url(./img/fondoBlurPorcentaje.png);
-}
+
 .cartel-proyecto {
     opacity: 0;
     color:white;
@@ -625,12 +628,17 @@ footer {
     .card-habilidades i {
         font-size: 68px;
     }
+    
     .habilidades {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 60px;
+        display: grid;
+        grid-template-columns: repeat(4, 200px);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 20px;
+        grid-template-areas:
+            "html css"
+            "js bs"
+            "sass git"
+            'mysql node';
     }
     .card-habilidades img {
         width: 68px;
@@ -800,9 +808,6 @@ footer {
         justify-content: center;
     }
 
-    .mysql {
-        margin-left: 50%;
-    }
 
     .img-qr img {
         width: 250px;
@@ -1049,9 +1054,9 @@ footer {
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(3, 1fr);
         grid-template-areas:
-            "nada3 html nada2 css nada4"
-            "js nada1 sass nada5 git"
-            "nada8 mysql nada7 bs nada9";
+            "html nada3 git nada2 css"
+            " nada1 js nada4 sass nada5 "
+            "mysql nada8 node nada7 bs";
     }
 
     .navbar-list li {
